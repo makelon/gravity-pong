@@ -1,6 +1,6 @@
 # Gravity Pong
 
-A one-sided minigame in the most literal sense, with an object that bounces on the edges of a browser window.
+A one-sided minigame in the most literal sense, with an object that bounces on the edges of a browser window. [Try it out](https://makelon.github.io/gravity-pong/).
 
 ### Usage
 
