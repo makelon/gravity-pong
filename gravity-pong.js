@@ -187,7 +187,7 @@ Ball.prototype.move = function(timestamp) {
 			: -this.velY - 2 * this.gravity;
 	}
 	else {
-		this.velY -= this.gravity;
+		this.velY -= this.gravity * dt;
 	}
 	if (this.velY > Ball.maxVelY) {
 		this.velY = Ball.maxVelY;
