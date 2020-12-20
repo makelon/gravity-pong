@@ -82,7 +82,7 @@ function Ball() {
 	this.obj.style.bottom = '0';
 	this.obj.style.left = '0';
 	this.obj.addEventListener('mousedown', this.hMouseDown);
-	this.obj.addEventListener('touchstart', this.hMouseDown);
+	this.obj.addEventListener('touchstart', this.hMouseDown, { passive: true });
 	document.body.appendChild(this.obj);
 	if (!Ball.width) {
 		Ball.width = this.obj.offsetWidth;
@@ -187,7 +187,7 @@ Ball.prototype.move = function(timestamp) {
 			: -this.velY - 2 * this.gravity;
 	}
 	else {
-		this.velY -= this.gravity;
+		this.velY -= this.gravity * dt;
 	}
 	if (this.velY > Ball.maxVelY) {
 		this.velY = Ball.maxVelY;
