@@ -82,7 +82,7 @@ function Ball() {
 	this.obj.style.bottom = '0';
 	this.obj.style.left = '0';
 	this.obj.addEventListener('mousedown', this.hMouseDown);
-	this.obj.addEventListener('touchstart', this.hMouseDown);
+	this.obj.addEventListener('touchstart', this.hMouseDown, { passive: true });
 	document.body.appendChild(this.obj);
 	if (!Ball.width) {
 		Ball.width = this.obj.offsetWidth;
